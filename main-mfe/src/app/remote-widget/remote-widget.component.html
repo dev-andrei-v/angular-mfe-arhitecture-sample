@@ -1,19 +1,24 @@
 <div class="remote-widget-wrapper" [class.loading]="loading" [class.error]="error">
   @if (loading) {
-    <div class="widget-skeleton">
-      <div class="skeleton-header">
-        <div class="skeleton-circle"></div>
-        <div class="skeleton-line short"></div>
+    <div class="card widget-skeleton">
+      <div class="card-block">
+        <div class="skeleton-header">
+          <div class="skeleton-circle"></div>
+          <div class="skeleton-line short"></div>
+        </div>
+        <div class="skeleton-line large"></div>
+        <div class="skeleton-line"></div>
+        <div class="skeleton-line"></div>
       </div>
-      <div class="skeleton-line large"></div>
-      <div class="skeleton-line"></div>
-      <div class="skeleton-line"></div>
     </div>
   }
   @if (error) {
-    <div class="widget-error">
-      <span class="error-icon">!</span>
-      <span>Failed to load {{ remoteName }}</span>
+    <div class="card widget-error">
+      <div class="card-block">
+        <cds-icon shape="warning-standard" size="28" class="error-icon"></cds-icon>
+        <span class="error-text">Failed to load {{ remoteName }}</span>
+        <span class="label label-danger">ERROR</span>
+      </div>
     </div>
   }
   <ng-container #widgetHost />

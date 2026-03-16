@@ -1,0 +1,37 @@
+<div class="orders-view">
+  <div class="page-header">
+    <h2>Orders</h2>
+    <p class="subtitle">Manage and track customer orders</p>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Order #</th>
+        <th>Customer</th>
+        <th>Status</th>
+        <th class="right">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (order of orders; track order.id) {
+        <tr>
+          <td>
+            <span class="order-id">{{ order.id }}</span>
+          </td>
+          <td>{{ order.customer }}</td>
+          <td>
+            <span class="label"
+                  [class.label-warning]="order.statusClass === 'warning'"
+                  [class.label-info]="order.statusClass === 'info'"
+                  [class.label-success]="order.statusClass === 'success'">
+              {{ order.status }}
+            </span>
+          </td>
+          <td class="right">{{ order.total | currency }}</td>
+        </tr>
+      }
+    </tbody>
+  </table>
+  <div class="table-footer">{{ orders.length }} orders</div>
+</div>

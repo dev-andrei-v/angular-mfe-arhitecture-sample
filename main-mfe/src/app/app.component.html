@@ -1,42 +1,43 @@
-<div class="shell-layout">
-  <nav class="sidebar">
-    <div class="sidebar-header">
-      <h1>MFE Shell</h1>
+<div class="main-container">
+  <header class="header header-6">
+    <div class="branding">
+      <cds-icon shape="applications" size="24" style="margin-right: 8px; color: #3A9FE8;"></cds-icon>
+      <span class="title">Enterprise Portal</span>
     </div>
-    <ul class="nav-list">
-      <li>
-        <a routerLink="/orders" routerLinkActive="active">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-            <line x1="3" y1="6" x2="21" y2="6"/>
-            <path d="M16 10a4 4 0 01-8 0"/>
-          </svg>
-          Orders
-        </a>
-      </li>
-      <li>
-        <a routerLink="/pcs" routerLinkActive="active">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-            <line x1="8" y1="21" x2="16" y2="21"/>
-            <line x1="12" y1="17" x2="12" y2="21"/>
-          </svg>
-          PCs
-        </a>
-      </li>
-    </ul>
-    <div class="sidebar-footer">
-      <div class="federation-badge">Module Federation</div>
+    <div class="header-actions">
+      <span class="federation-tag">Module Federation</span>
+      <clr-dropdown>
+        <button class="nav-icon" clrDropdownTrigger aria-label="user menu">
+          <cds-icon shape="user" size="20"></cds-icon>
+        </button>
+        <clr-dropdown-menu clrPosition="bottom-right">
+          <a clrDropdownItem>Profile</a>
+          <a clrDropdownItem>Settings</a>
+          <a clrDropdownItem>Logout</a>
+        </clr-dropdown-menu>
+      </clr-dropdown>
     </div>
-  </nav>
-  <main class="content">
-    <div class="widget-strip">
-      <app-widget />
-      <app-remote-widget remoteName="orders-mfe" />
-      <app-remote-widget remoteName="pcs-mfe" />
+  </header>
+  <div class="content-container">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true" class="nav-sidebar">
+      <a clrVerticalNavLink routerLink="/orders" routerLinkActive="active">
+        <cds-icon clrVerticalNavIcon shape="shopping-bag"></cds-icon>
+        Orders
+      </a>
+      <a clrVerticalNavLink routerLink="/pcs" routerLinkActive="active">
+        <cds-icon clrVerticalNavIcon shape="display"></cds-icon>
+        PCs
+      </a>
+    </clr-vertical-nav>
+    <div class="content-area">
+      <div class="widget-strip">
+        <app-widget />
+        <app-remote-widget remoteName="orders-mfe" />
+        <app-remote-widget remoteName="pcs-mfe" />
+      </div>
+      <div class="page-content">
+        <router-outlet />
+      </div>
     </div>
-    <div class="page-content">
-      <router-outlet />
-    </div>
-  </main>
+  </div>
 </div>

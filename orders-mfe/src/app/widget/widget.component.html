@@ -1,31 +1,27 @@
-<div class="widget orders-widget">
-  <div class="widget-header">
-    <div class="widget-icon">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
-        <line x1="3" y1="6" x2="21" y2="6"/>
-        <path d="M16 10a4 4 0 01-8 0"/>
-      </svg>
+<div class="card widget-card">
+  <div class="card-block">
+    <div class="widget-header">
+      <cds-icon shape="shopping-bag" size="22" class="widget-icon"></cds-icon>
+      <span class="widget-label">Orders</span>
     </div>
-    <span class="widget-label">Orders</span>
-  </div>
-  <div class="widget-value">3</div>
-  <div class="widget-breakdown">
-    <div class="breakdown-item">
-      <span class="dot pending"></span>
-      <span>1 Pending</span>
-    </div>
-    <div class="breakdown-item">
-      <span class="dot shipped"></span>
-      <span>1 Shipped</span>
-    </div>
-    <div class="breakdown-item">
-      <span class="dot delivered"></span>
-      <span>1 Delivered</span>
+    <div class="widget-value">3</div>
+    <div class="widget-breakdown">
+      <div class="breakdown-item">
+        <span class="label label-warning">1</span>
+        <span>Pending</span>
+      </div>
+      <div class="breakdown-item">
+        <span class="label label-info">1</span>
+        <span>Shipped</span>
+      </div>
+      <div class="breakdown-item">
+        <span class="label label-success">1</span>
+        <span>Delivered</span>
+      </div>
     </div>
   </div>
-  <div class="widget-footer">
+  <div class="card-footer">
     <span class="trend up">+12%</span>
-    <span class="trend-label">vs last week</span>
+    <span class="footer-text">vs last week</span>
   </div>
 </div>

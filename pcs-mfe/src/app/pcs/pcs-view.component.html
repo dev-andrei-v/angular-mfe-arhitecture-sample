@@ -1,0 +1,31 @@
+<div class="pcs-view">
+  <div class="page-header">
+    <h2>PCs</h2>
+    <p class="subtitle">Browse available workstations and desktops</p>
+  </div>
+
+  <div class="card-grid">
+    @for (pc of pcs; track pc.name) {
+      <div class="card pc-card">
+        <div class="card-header">
+          <cds-icon shape="display" size="18"></cds-icon>
+          {{ pc.name }}
+        </div>
+        <div class="card-block">
+          <div class="card-text">
+            <span class="label" [class.label-purple]="pc.tierClass === 'purple'"
+                  [class.label-blue]="pc.tierClass === 'blue'"
+                  [class.label-light-blue]="pc.tierClass === 'light-blue'">
+              {{ pc.tier }}
+            </span>
+            <p class="specs">{{ pc.specs }}</p>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="price">{{ pc.price | currency }}</span>
+          <button class="btn btn-sm btn-link">Details</button>
+        </div>
+      </div>
+    }
+  </div>
+</div>

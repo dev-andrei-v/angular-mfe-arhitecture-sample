@@ -7,11 +7,13 @@ import {
   OnDestroy,
   ComponentRef,
 } from '@angular/core';
+import { ClarityModule } from '@clr/angular';
 import { loadRemoteModule } from '@angular-architects/module-federation';
 
 @Component({
   selector: 'app-remote-widget',
   standalone: true,
+  imports: [ClarityModule],
   templateUrl: './remote-widget.component.html',
   styleUrls: ['./remote-widget.component.scss']
 })

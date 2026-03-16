@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { ClarityModule } from '@clr/angular';
 
 @Component({
   selector: 'app-widget',
   standalone: true,
-  imports: [],
+  imports: [ClarityModule],
   templateUrl: './widget.component.html',
   styleUrls: ['./widget.component.scss']
 })
