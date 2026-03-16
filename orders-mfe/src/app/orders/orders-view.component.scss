@@ -1,0 +1,36 @@
+.orders-view {
+  padding: 0;
+}
+
+.page-header {
+  margin-bottom: 20px;
+
+  h2 {
+    margin: 0 0 4px;
+    color: var(--brand-text, #21333D);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+
+  .subtitle {
+    color: var(--brand-text-secondary, #6B7D8A);
+    margin: 0;
+    font-size: 0.9rem;
+  }
+}
+
+.order-id {
+  font-weight: 600;
+  color: var(--brand-primary, #0076CE);
+}
+
+.right {
+  text-align: right;
+}
+
+.table-footer {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: var(--brand-text-secondary, #6B7D8A);
+  border-top: 1px solid #dee2e6;
+}

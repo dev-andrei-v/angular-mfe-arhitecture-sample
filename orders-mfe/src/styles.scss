@@ -1,1 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --brand-primary: #0076CE;
+  --brand-primary-dark: #005A9E;
+  --brand-primary-light: #3A9FE8;
+  --brand-dark: #1D2731;
+  --brand-charcoal: #2C3E50;
+  --brand-surface: #F4F6F8;
+  --brand-white: #FFFFFF;
+  --brand-text: #21333D;
+  --brand-text-secondary: #6B7D8A;
+  --brand-border: #D9DFE3;
+  --brand-success: #2D8C3C;
+  --brand-warning: #E8A318;
+  --brand-danger: #C92C2C;
+}
+
+body {
+  font-family: "Clarity City", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}

@@ -1,86 +1,58 @@
-.shell-layout {
-  display: flex;
+.main-container {
   height: 100vh;
-}
-
-.sidebar {
-  width: 240px;
-  background: #1a1a2e;
-  color: #fff;
   display: flex;
   flex-direction: column;
-  flex-shrink: 0;
 }
 
-.sidebar-header {
-  padding: 24px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+.header {
+  background: var(--brand-dark, #1D2731) !important;
+  border-bottom: 2px solid var(--brand-primary, #0076CE);
 
-  h1 {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+  .branding {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    .title {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
   }
-}
 
-.nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 12px 0;
-  flex: 1;
-
-  li a {
+  .header-actions {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 24px;
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: background 0.2s, color 0.2s;
-
-    svg {
-      flex-shrink: 0;
-      opacity: 0.7;
-      transition: opacity 0.2s;
-    }
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.08);
-      color: #fff;
-
-      svg { opacity: 1; }
-    }
-
-    &.active {
-      background: rgba(255, 255, 255, 0.12);
-      color: #fff;
-      border-left: 3px solid #4fc3f7;
-      padding-left: 21px;
-
-      svg { opacity: 1; }
-    }
   }
 }
 
-.sidebar-footer {
-  padding: 16px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.federation-badge {
-  font-size: 0.7rem;
+.federation-tag {
+  font-size: 0.65rem;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255, 255, 255, 0.4);
-  text-align: center;
+  letter-spacing: 1.5px;
+  color: rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 2px 10px;
+  border-radius: 3px;
 }
 
-.content {
+.content-container {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.nav-sidebar {
+  border-right: 1px solid var(--brand-border, #D9DFE3);
+}
+
+.content-area {
   flex: 1;
   overflow: auto;
-  background: #f0f2f5;
+  background: var(--brand-surface, #F4F6F8);
+  padding: 0 !important;
 }
 
 .widget-strip {

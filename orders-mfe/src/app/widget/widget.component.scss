@@ -1,53 +1,59 @@
-:host { display: block; }
+:host { display: block; height: 100%; }
 
-.widget {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 16px;
-  padding: 24px;
-  color: #fff;
-  font-family: inherit;
+.widget-card {
   height: 100%;
+  border: none;
+  border-top: 3px solid #7B61CE;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
+  margin-top: 0;
+
+  .card-block {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-top: 1px solid var(--brand-border, #D9DFE3);
+  }
 }
 
 .widget-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .widget-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: #7B61CE;
 }
 
 .widget-label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  opacity: 0.9;
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  color: var(--brand-text-secondary, #6B7D8A);
 }
 
 .widget-value {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-text, #21333D);
   margin-bottom: 16px;
+  line-height: 1;
 }
 
 .widget-breakdown {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  flex: 1;
+  gap: 8px;
 }
 
 .breakdown-item {
@@ -55,26 +61,7 @@
   align-items: center;
   gap: 8px;
   font-size: 0.85rem;
-  opacity: 0.9;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-
-.dot.pending { background: #ffd93d; }
-.dot.shipped { background: #6bcfff; }
-.dot.delivered { background: #6bff9e; }
-
-.widget-footer {
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  display: flex;
-  align-items: center;
-  gap: 6px;
+  color: var(--brand-text-secondary, #6B7D8A);
 }
 
 .trend {
@@ -82,10 +69,10 @@
   font-size: 0.9rem;
 }
 
-.trend.up { color: #6bff9e; }
-.trend.down { color: #ff6b6b; }
+.trend.up { color: var(--brand-success, #2D8C3C); }
+.trend.down { color: var(--brand-danger, #C92C2C); }
 
-.trend-label {
+.footer-text {
   font-size: 0.8rem;
-  opacity: 0.7;
+  color: var(--brand-text-secondary, #6B7D8A);
 }

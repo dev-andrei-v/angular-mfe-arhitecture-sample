@@ -1,54 +1,59 @@
-:host { display: block; }
+:host { display: block; height: 100%; }
 
-.widget {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  border-radius: 16px;
-  padding: 24px;
-  color: #fff;
-  font-family: inherit;
+.widget-card {
   height: 100%;
+  border: none;
+  border-top: 3px solid var(--brand-primary, #0076CE);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
+  margin-top: 0;
+
+  .card-block {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-top: 1px solid var(--brand-border, #D9DFE3);
+  }
 }
 
 .widget-header {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 16px;
+  gap: 8px;
+  margin-bottom: 12px;
 }
 
 .widget-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(79, 195, 247, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #4fc3f7;
+  color: var(--brand-primary, #0076CE);
 }
 
 .widget-label {
-  font-size: 0.9rem;
-  font-weight: 500;
-  opacity: 0.9;
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
+  color: var(--brand-text-secondary, #6B7D8A);
 }
 
 .widget-value {
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--brand-text, #21333D);
   margin-bottom: 16px;
+  line-height: 1;
 }
 
 .widget-breakdown {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  flex: 1;
+  gap: 8px;
 }
 
 .breakdown-item {
@@ -56,39 +61,10 @@
   align-items: center;
   gap: 8px;
   font-size: 0.85rem;
-  opacity: 0.9;
+  color: var(--brand-text-secondary, #6B7D8A);
 }
 
-.dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-
-.dot.active { background: #4fc3f7; }
-.dot.healthy { background: #6bff9e; }
-.dot.info { background: #ffd93d; }
-
-.widget-footer {
-  margin-top: 16px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.status-badge {
-  background: #6bff9e;
-  color: #1a1a2e;
-  font-size: 0.7rem;
-  font-weight: 800;
-  padding: 2px 8px;
-  border-radius: 4px;
-  letter-spacing: 1px;
-}
-
-.trend-label {
+.footer-text {
   font-size: 0.8rem;
-  opacity: 0.7;
+  color: var(--brand-text-secondary, #6B7D8A);
 }

@@ -34,6 +34,8 @@
 							}
 						],
 						"styles": [
+							"node_modules/@cds/core/global.min.css",
+							"node_modules/@clr/ui/clr-ui.min.css",
 							"src/styles.scss"
 						],
 						"scripts": [],
@@ -45,13 +47,13 @@
 							"budgets": [
 								{
 									"type": "initial",
-									"maximumWarning": "500kB",
-									"maximumError": "1MB"
+									"maximumWarning": "2MB",
+									"maximumError": "3MB"
 								},
 								{
 									"type": "anyComponentStyle",
-									"maximumWarning": "4kB",
-									"maximumError": "8kB"
+									"maximumWarning": "10kB",
+									"maximumError": "20kB"
 								}
 							],
 							"outputHashing": "all",

@@ -2,18 +2,22 @@
 
 .remote-widget-wrapper {
   height: 100%;
-  border-radius: 16px;
   overflow: hidden;
 }
 
 .widget-skeleton {
-  background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
-  border-radius: 16px;
-  padding: 24px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  border: none;
+  border-top: 3px solid var(--brand-border, #D9DFE3);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-top: 0;
+
+  .card-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
 }
 
 .skeleton-header {
@@ -23,50 +27,52 @@
 }
 
 .skeleton-circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: rgba(0,0,0,0.08);
+  width: 36px;
+  height: 36px;
+  border-radius: 4px;
+  background: var(--brand-border, #D9DFE3);
   animation: pulse 1.5s ease-in-out infinite;
 }
 
 .skeleton-line {
   height: 14px;
-  border-radius: 7px;
-  background: rgba(0,0,0,0.08);
+  border-radius: 3px;
+  background: var(--brand-border, #D9DFE3);
   width: 70%;
   animation: pulse 1.5s ease-in-out infinite;
 }
 
 .skeleton-line.short { width: 40%; }
-.skeleton-line.large { height: 36px; width: 30%; border-radius: 8px; }
+.skeleton-line.large { height: 32px; width: 30%; border-radius: 4px; }
 
 @keyframes pulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  50% { opacity: 0.4; }
 }
 
 .widget-error {
-  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
-  border-radius: 16px;
-  padding: 24px;
-  color: #fff;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 0.9rem;
+  border: none;
+  border-top: 3px solid var(--brand-danger, #C92C2C);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-top: 0;
+
+  .card-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 24px;
+    height: 100%;
+  }
 }
 
 .error-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
+  color: var(--brand-danger, #C92C2C);
+}
+
+.error-text {
+  font-size: 0.9rem;
+  color: var(--brand-text-secondary, #6B7D8A);
 }
