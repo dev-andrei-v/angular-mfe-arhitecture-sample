@@ -181,6 +181,14 @@ All applications use `shareAll()` with:
 
 This requires all apps to use the same Angular and RxJS versions.
 
+## Screenshots
+
+### Shell — Orders View
+![Orders View](screenshots/shell-orders.png)
+
+### Shell — PCs Catalog View
+![PCs View](screenshots/shell-pcs.png)
+
 ## Tech Stack
 
 - Angular 19.2
